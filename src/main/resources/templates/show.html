@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Detalles del Anuncio</title>
+</head>
+<body>
+    <h1>Anuncios</h1>
+    <p><strong>Nombre:</strong> <span th:text="${anuncio.nombre}"></span></p>
+    <p><strong>Asunto:</strong> <span th:text="${anuncio.asunto}"></span></p>
+    <p><strong>Comentario:</strong> <span th:text="${anuncio.comentario}"></span></p>
+
+    <a href="/">Regresar</a>
+</body>
+</html>

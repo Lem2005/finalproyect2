@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Tablón de Anuncios</title>
+</head>
+<body>
+    <h1>Tablón de Anuncios</h1>
+
+    <p th:if="${mensajeBienvenida}" th:text="${mensajeBienvenida}"></p>
+
+    <ul>
+        <li th:each="anuncio : ${anuncios}">
+            <a th:href="@{'/show?numAnuncio=' + ${anuncio.id}}" th:text="${anuncio.asunto}"></a>
+        </li>
+    </ul>
+
+    <a href="/new">New anuncio</a>
+</body>
+</html>
